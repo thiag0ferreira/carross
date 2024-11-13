@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listar Carros</title>
+</head>
+<body>
+<button class="botao_lista" (click)="findAllCarros()"> Listar Todos os Carros</button>
+<div *ngIf="mostrar">
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Descrição</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let carro of listaCarros">
+      <td>{{ carro.id }}</td>
+      <td>
+        <span *ngIf="!carro.editing">{{ carro.nome }}</span>
+        <input *ngIf="carro.editing" [(ngModel)]="carro.nome" />
+      </td>
+      <td>
+        <span *ngIf="!carro.editing">{{ carro.tipo }}</span>
+        <input *ngIf="carro.editing" [(ngModel)]="carro.tipo" />
+      </td>
+      <td>
+        <span *ngIf="!carro.editing">{{ carro.descricao }}</span>
+        <input *ngIf="carro.editing" [(ngModel)]="carro.descricao" />
+      </td>
+      <td>
+        <button (click)="toggleEditing(carro)">{{ carro.editing ? 'Salvar' : 'Editar' }}</button>
+        <button (click)="deleteCarro(carro)">Deletar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+
+</div>
+
+<div class="overlay"></div>
+
+</body>
+</html>

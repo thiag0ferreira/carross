@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carros API</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Carros API</h1>
+</header>
+
+<section class="pesquisa" id="divBusca">
+  <input type="text" id="txtBusca" placeholder="Buscar carros"/>
+  <button id="btnBusca">Buscar</button>
+</section>
+
+<section>
+  <h1>Cadastrar Carros</h1>
+  <div>
+    <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+      <div>
+        <label for="nome">Nome:</label>
+        <input formControlName="nome" type="text" id="nome" />
+      </div>
+      <div>
+        <h3>Escolha o tipo de carro:</h3>
+        <select formControlName="tipo" name="tipo">
+          <option value=""></option>
+          <option value="classicos">Clássicos</option>
+          <option value="esportivos">Esportivos</option>
+          <option value="luxo">Luxo</option>
+        </select>
+      </div>
+      <div>
+        <label for="descricao">Descrição:</label>
+        <textarea formControlName="descricao" id="descricao"></textarea>
+      </div>
+      <div>
+        <button type="submit">Salvar</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<app-lista-carrros></app-lista-carrros>
+
+<footer>
+  <p>&copy; 2023 Carros API. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

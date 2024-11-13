@@ -1,0 +1,82 @@
+/* Reset de alguns estilos padrão */
+body, h1, h2, h3, p, button, table, th, td {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Aplica uma fonte e cor de fundo ao corpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Estiliza o botão de lista */
+.botao_lista {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Estiliza a tabela de carros */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Estiliza o cabeçalho da tabela */
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estiliza as células do cabeçalho da tabela */
+th {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Estiliza as células do corpo da tabela */
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Estiliza as linhas ímpares da tabela */
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Estiliza as linhas pares da tabela */
+tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+/* Estilos para os botões dentro da célula da tabela */
+td button {
+  background-color: transparent; /* Fundo transparente */
+  border: none; /* Sem borda */
+  cursor: pointer; /* Cursor de ponteiro ao passar por cima */
+  margin-right: 5px; /* Espaço à direita dos botões para separação */
+}
+
+/* Estilos específicos para o botão de editar */
+.botao-editar img {
+  margin-right: 15px;
+  width: 20px; /* Largura da imagem */
+  height: 20px; /* Altura da imagem */
+}
+
+/* Estilos específicos para o botão de excluir */
+.botao-excluir img {
+  margin-right: 15px;
+  width: 20px; /* Largura da imagem */
+  height: 20px; /* Altura da imagem */
+}

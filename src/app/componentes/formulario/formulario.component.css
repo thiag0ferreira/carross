@@ -1,0 +1,91 @@
+/* Reset de alguns estilos padrão */
+body, h1, h3, p, input, button, select, textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Aplica uma cor de fundo e alguns estilos básicos ao corpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da viewport */
+}
+
+/* Estiliza o cabeçalho */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+/* Estiliza as seções principais */
+section {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza a seção de pesquisa */
+.pesquisa {
+  text-align: center;
+}
+
+#txtBusca {
+  padding: 8px;
+  margin-right: 8px;
+}
+
+#btnBusca {
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estiliza a seção do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* Estiliza os inputs do formulário */
+label, input, select, textarea {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, select, textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estiliza o botão */
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Estiliza o rodapé */
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #333;
+  color: #fff;
+}
